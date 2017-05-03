@@ -1,7 +1,6 @@
 ﻿Option Explicit On
 Option Infer On
 
-Imports Newtonsoft.Json.Linq
 Imports Digital_Assets_Manager.CryptoExchangeAPI
 
 Public Class frmMain
