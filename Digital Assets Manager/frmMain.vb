@@ -2,75 +2,50 @@
 Option Infer On
 
 Imports Newtonsoft.Json.Linq
+Imports Digital_Assets_Manager.CryptoExchangeAPI
 
 Public Class frmMain
     Private Sub btnCalc_Click(sender As Object, e As EventArgs) Handles btnCalc.Click
+        btnCalc.Enabled = False
         Try
-            btnCalc.Enabled = False
-
-            Dim jsonData As String = New System.Net.WebClient().DownloadString("https://api.kraken.com/0/public/Ticker?pair=DASHEUR,ZECEUR,ETHEUR,XMREUR,XBTEUR,LTCEUR,XRPXBT")
-            Dim jsonKraken As JObject = JObject.Parse(jsonData)
-            jsonData = New System.Net.WebClient().DownloadString("https://bittrex.com/api/v1.1/public/getticker?market=btc-pivx")
-            Dim jsonBittrex As JObject = JObject.Parse(jsonData)
-
-            Dim jsonKrakenErrorCheck As Array = jsonKraken.SelectToken("error").ToArray
-            If jsonKrakenErrorCheck.Length > 0 Then
-                MsgBox("[Kraken API] " & jsonKrakenErrorCheck(0), vbCritical, Me.Text)
-                btnCalc.Enabled = True
-                Exit Sub
-            End If
-            Dim jsonBittrexErrorCheck As Boolean = jsonBittrex.SelectToken("success")
-            If jsonBittrexErrorCheck = False Then
-                MsgBox("[Bittrex API] Error: " & jsonBittrex.SelectToken("message").ToString, vbCritical, Me.Text)
-                btnCalc.Enabled = True
-                Exit Sub
-            End If
-
+            Dim myKraken As New KrakenExchange
+            Dim myBittrex As New BittrexExchange
             If ds.Tables.Count > 0 Then
                 Dim nTotal As Decimal = 0
-                Dim jsonValue As String
-                Dim nBTC As Decimal = 0 'Used for PIVX > EUR conversion
                 For i As Integer = 0 To ds.Tables("MyAssets").Rows.Count - 1
                     Select Case ds.Tables("MyAssets").Rows(i).Item("Digital Asset")
                         Case "Bitcoin"
-                            jsonValue = jsonKraken.SelectToken("result").SelectToken("XXBTZEUR").SelectToken("c")(0)
-                            nTotal += jsonValue * ds.Tables("MyAssets").Rows(i).Item("Quantity")
-                            nBTC = jsonValue
-                            lblBTC.Text = "Bitcoin: " & Math.Round(Convert.ToDecimal(jsonValue), 2)
+                            nTotal += myKraken.Bitcoin * ds.Tables("MyAssets").Rows(i).Item("Quantity")
                         Case "Dash"
-                            jsonValue = jsonKraken.SelectToken("result").SelectToken("DASHEUR").SelectToken("c")(0)
-                            nTotal += jsonValue * ds.Tables("MyAssets").Rows(i).Item("Quantity")
-                            lblDash.Text = "DASH: " & Math.Round(Convert.ToDecimal(jsonValue), 2)
+                            nTotal += myKraken.Dash * ds.Tables("MyAssets").Rows(i).Item("Quantity")
                         Case "Fiat (Euro)"
                             nTotal += ds.Tables("MyAssets").Rows(i).Item("Investment") 'Adds Euro assets from exchange.
                         Case "Ethereum"
-                            jsonValue = jsonKraken.SelectToken("result").SelectToken("XETHZEUR").SelectToken("c")(0)
-                            nTotal += jsonValue * ds.Tables("MyAssets").Rows(i).Item("Quantity")
-                            lblETH.Text = "Ethereum: " & Math.Round(Convert.ToDecimal(jsonValue), 2)
+                            nTotal += myKraken.Ethereum * ds.Tables("MyAssets").Rows(i).Item("Quantity")
                         Case "Litecoin"
-                            jsonValue = jsonKraken.SelectToken("result").SelectToken("XLTCZEUR").SelectToken("c")(0)
-                            nTotal += jsonValue * ds.Tables("MyAssets").Rows(i).Item("Quantity")
-                            lblLTC.Text = "Litecoin: " & Math.Round(Convert.ToDecimal(jsonValue), 2)
+                            nTotal += myKraken.Litecoin * ds.Tables("MyAssets").Rows(i).Item("Quantity")
                         Case "Monero"
-                            jsonValue = jsonKraken.SelectToken("result").SelectToken("XXMRZEUR").SelectToken("c")(0)
-                            nTotal += jsonValue * ds.Tables("MyAssets").Rows(i).Item("Quantity")
-                            lblXMR.Text = "Monero: " & Math.Round(Convert.ToDecimal(jsonValue), 2)
+                            nTotal += myKraken.Monero * ds.Tables("MyAssets").Rows(i).Item("Quantity")
                         Case "PIVX"
-                            jsonValue = jsonBittrex.SelectToken("result").SelectToken("Last").ToString
-                            nTotal += (jsonValue * nBTC) * ds.Tables("MyAssets").Rows(i).Item("Quantity") 'Converts PIVX > EUR and adds to total.
-                            lblPIVX.Text = "PIVX: " & Math.Round(Convert.ToDecimal(jsonValue * nBTC), 2)
+                            nTotal += (myBittrex.PIVX * myKraken.Bitcoin) * ds.Tables("MyAssets").Rows(i).Item("Quantity") 'Converts PIVX > EUR and adds to total.
                         Case "Ripple"
-                            jsonValue = jsonKraken.SelectToken("result").SelectToken("XXRPXXBT").SelectToken("c")(0)
-                            nTotal += (jsonValue * nBTC) * ds.Tables("MyAssets").Rows(i).Item("Quantity")
-                            lblXRP.Text = "Ripple: " & Math.Round(Convert.ToDecimal(jsonValue * nBTC), 2)
+                            nTotal += myKraken.Ripple * ds.Tables("MyAssets").Rows(i).Item("Quantity")
                         Case "Zcash"
-                            jsonValue = jsonKraken.SelectToken("result").SelectToken("XZECZEUR").SelectToken("c")(0)
-                            nTotal += jsonValue * ds.Tables("MyAssets").Rows(i).Item("Quantity")
-                            lblZEC.Text = "ZCash: " & Math.Round(Convert.ToDecimal(jsonValue), 2)
+                            nTotal += myKraken.Zcash * ds.Tables("MyAssets").Rows(i).Item("Quantity")
                     End Select
                 Next i
+                lblBTC.Text = "Bitcoin: " & Math.Round(myKraken.Bitcoin, 2)
+                lblDash.Text = "Dash: " & Math.Round(myKraken.Dash, 2)
+                lblETH.Text = "Ethereum: " & Math.Round(myKraken.Ethereum, 2)
+                lblLTC.Text = "Litecoin: " & Math.Round(myKraken.Litecoin, 2)
+                lblXMR.Text = "Monero: " & Math.Round(myKraken.Monero, 2)
+                lblPIVX.Text = "PIVX: " & Math.Round(myBittrex.PIVX * myKraken.Bitcoin, 2)
+                lblXRP.Text = "Ripple: " & Math.Round(myKraken.Ripple, 2)
+                lblZEC.Text = "Zcash: " & Math.Round(myKraken.Zcash, 2)
                 lblTotal.Text = "€ " & Math.Round(nTotal - nInvestment, 2)
             End If
+        Catch err As APIException
+            MsgBox(err.Message, vbCritical, Me.Text)
         Catch err As Exception
             MsgBox("Error: " & err.Message, vbCritical, Me.Text)
         Finally
