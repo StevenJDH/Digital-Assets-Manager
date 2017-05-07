@@ -23,6 +23,8 @@ Public Class frmMain
                             nTotal += myKraken.Ethereum * ds.Tables("MyAssets").Rows(i).Item("Quantity")
                         Case "Litecoin"
                             nTotal += myKraken.Litecoin * ds.Tables("MyAssets").Rows(i).Item("Quantity")
+                        Case "Lumens"
+                            nTotal += myKraken.Lumens * ds.Tables("MyAssets").Rows(i).Item("Quantity")
                         Case "Monero"
                             nTotal += myKraken.Monero * ds.Tables("MyAssets").Rows(i).Item("Quantity")
                         Case "PIVX"
@@ -37,6 +39,7 @@ Public Class frmMain
                 lblDash.Text = "Dash: " & Math.Round(myKraken.Dash, 2)
                 lblETH.Text = "Ethereum: " & Math.Round(myKraken.Ethereum, 2)
                 lblLTC.Text = "Litecoin: " & Math.Round(myKraken.Litecoin, 2)
+                lblXLM.Text = "Lumens: " & Math.Round(myKraken.Lumens, 2)
                 lblXMR.Text = "Monero: " & Math.Round(myKraken.Monero, 2)
                 lblPIVX.Text = "PIVX: " & Math.Round(myBittrex.PIVX * myKraken.Bitcoin, 2)
                 lblXRP.Text = "Ripple: " & Math.Round(myKraken.Ripple, 2)

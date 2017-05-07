@@ -50,6 +50,7 @@ Partial Class frmMain
         Me.OFDialog1 = New System.Windows.Forms.OpenFileDialog()
         Me.FBDialog1 = New System.Windows.Forms.FolderBrowserDialog()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.lblXLM = New System.Windows.Forms.Label()
         Me.MenuStrip1.SuspendLayout()
         Me.StatusStrip1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
@@ -263,6 +264,7 @@ Partial Class frmMain
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.lblXLM)
         Me.GroupBox1.Controls.Add(Me.lblDash)
         Me.GroupBox1.Controls.Add(Me.lblZEC)
         Me.GroupBox1.Controls.Add(Me.lblLTC)
@@ -277,6 +279,15 @@ Partial Class frmMain
         Me.GroupBox1.TabIndex = 22
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Summary"
+        '
+        'lblXLM
+        '
+        Me.lblXLM.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblXLM.Location = New System.Drawing.Point(288, 56)
+        Me.lblXLM.Name = "lblXLM"
+        Me.lblXLM.Size = New System.Drawing.Size(112, 13)
+        Me.lblXLM.TabIndex = 20
+        Me.lblXLM.Text = "Lumens: 0"
         '
         'frmMain
         '
@@ -332,4 +343,5 @@ Partial Class frmMain
     Friend WithEvents OFDialog1 As OpenFileDialog
     Friend WithEvents FBDialog1 As FolderBrowserDialog
     Friend WithEvents GroupBox1 As GroupBox
+    Friend WithEvents lblXLM As Label
 End Class

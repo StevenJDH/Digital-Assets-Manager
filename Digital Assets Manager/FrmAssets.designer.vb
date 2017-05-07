@@ -28,6 +28,9 @@ Partial Class FrmAssets
         Me.btnAdd = New System.Windows.Forms.Button()
         Me.btnSave = New System.Windows.Forms.Button()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.btnClose = New System.Windows.Forms.Button()
         Me.lblQuantity = New System.Windows.Forms.Label()
         Me.btnEdit = New System.Windows.Forms.Button()
@@ -37,9 +40,6 @@ Partial Class FrmAssets
         Me.numQuantity = New System.Windows.Forms.NumericUpDown()
         Me.numInvestment = New System.Windows.Forms.NumericUpDown()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.numQuantity, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.numInvestment, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -114,6 +114,27 @@ Partial Class FrmAssets
         Me.DataGridView1.Size = New System.Drawing.Size(296, 212)
         Me.DataGridView1.TabIndex = 9
         '
+        'Column2
+        '
+        Me.Column2.HeaderText = "Digital Asset"
+        Me.Column2.Name = "Column2"
+        Me.Column2.ReadOnly = True
+        Me.Column2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic
+        '
+        'Column1
+        '
+        Me.Column1.HeaderText = "Quantity"
+        Me.Column1.Name = "Column1"
+        Me.Column1.ReadOnly = True
+        Me.Column1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic
+        '
+        'Column3
+        '
+        Me.Column3.HeaderText = "Investment"
+        Me.Column3.Name = "Column3"
+        Me.Column3.ReadOnly = True
+        Me.Column3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic
+        '
         'btnClose
         '
         Me.btnClose.Location = New System.Drawing.Point(312, 168)
@@ -154,7 +175,7 @@ Partial Class FrmAssets
         '
         Me.cmbAssets.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cmbAssets.FormattingEnabled = True
-        Me.cmbAssets.Items.AddRange(New Object() {"Bitcoin", "Dash", "Fiat (Euro)", "Ethereum", "Litecoin", "Monero", "PIVX", "Ripple", "Zcash"})
+        Me.cmbAssets.Items.AddRange(New Object() {"Bitcoin", "Dash", "Fiat (Euro)", "Ethereum", "Litecoin", "Lumens", "Monero", "PIVX", "Ripple", "Zcash"})
         Me.cmbAssets.Location = New System.Drawing.Point(8, 240)
         Me.cmbAssets.Name = "cmbAssets"
         Me.cmbAssets.Size = New System.Drawing.Size(296, 21)
@@ -201,27 +222,6 @@ Partial Class FrmAssets
         Me.Label3.Size = New System.Drawing.Size(62, 13)
         Me.Label3.TabIndex = 47
         Me.Label3.Text = "Investment:"
-        '
-        'Column2
-        '
-        Me.Column2.HeaderText = "Digital Asset"
-        Me.Column2.Name = "Column2"
-        Me.Column2.ReadOnly = True
-        Me.Column2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic
-        '
-        'Column1
-        '
-        Me.Column1.HeaderText = "Quantity"
-        Me.Column1.Name = "Column1"
-        Me.Column1.ReadOnly = True
-        Me.Column1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic
-        '
-        'Column3
-        '
-        Me.Column3.HeaderText = "Investment"
-        Me.Column3.Name = "Column3"
-        Me.Column3.ReadOnly = True
-        Me.Column3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic
         '
         'FrmAssets
         '
