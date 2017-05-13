@@ -1,7 +1,7 @@
 # Digital Assets Manager
 Monitors your cryptocurrency profits without needing to access your accounts or deal with watch only wallets that may pose a privacy risk. This is also useful for those who are using hardware wallets.
 
-https://github.com/StevenJDH/Digital-Assets-Manager
+Releases: https://github.com/StevenJDH/Digital-Assets-Manager/releases
 
 Changelog: https://github.com/StevenJDH/Digital-Assets-Manager/wiki/Changelog
 
