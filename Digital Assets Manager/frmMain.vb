@@ -35,15 +35,15 @@ Public Class frmMain
                             nTotal += myKraken.Zcash * ds.Tables("MyAssets").Rows(i).Item("Quantity")
                     End Select
                 Next i
-                lblBTC.Text = "Bitcoin: " & Math.Round(myKraken.Bitcoin, 2)
-                lblDash.Text = "Dash: " & Math.Round(myKraken.Dash, 2)
-                lblETH.Text = "Ethereum: " & Math.Round(myKraken.Ethereum, 2)
-                lblLTC.Text = "Litecoin: " & Math.Round(myKraken.Litecoin, 2)
-                lblXLM.Text = "Lumens: " & Math.Round(myKraken.Lumens, 2)
-                lblXMR.Text = "Monero: " & Math.Round(myKraken.Monero, 2)
-                lblPIVX.Text = "PIVX: " & Math.Round(myBittrex.PIVX * myKraken.Bitcoin, 2)
-                lblXRP.Text = "Ripple: " & Math.Round(myKraken.Ripple, 2)
-                lblZEC.Text = "Zcash: " & Math.Round(myKraken.Zcash, 2)
+                lblBTC.Text = "Bitcoin: " & Math.Round(myKraken.Bitcoin, 4)
+                lblDash.Text = "Dash: " & Math.Round(myKraken.Dash, 4)
+                lblETH.Text = "Ethereum: " & Math.Round(myKraken.Ethereum, 4)
+                lblLTC.Text = "Litecoin: " & Math.Round(myKraken.Litecoin, 4)
+                lblXLM.Text = "Lumens: " & Math.Round(myKraken.Lumens, 4)
+                lblXMR.Text = "Monero: " & Math.Round(myKraken.Monero, 4)
+                lblPIVX.Text = "PIVX: " & Math.Round(myBittrex.PIVX * myKraken.Bitcoin, 4)
+                lblXRP.Text = "Ripple: " & Math.Round(myKraken.Ripple, 4)
+                lblZEC.Text = "Zcash: " & Math.Round(myKraken.Zcash, 4)
                 lblTotal.Text = "€ " & Math.Round(nTotal - nInvestment, 2)
             End If
         Catch err As APIException
@@ -140,9 +140,9 @@ Public Class frmMain
     End Sub
 
     Private Sub mnuAboutItem_Click(sender As Object, e As EventArgs) Handles mnuAboutItem.Click
-        MsgBox("Digital Assets Manager 1.0 (30/5/2017)" & vbNewLine & vbNewLine & "Author: Steven Jenkins De Haro" &
+        MsgBox("Digital Assets Manager 1.0 (30/6/2017)" & vbNewLine & vbNewLine & "Author: Steven Jenkins De Haro" &
         vbNewLine & "A Steve Creation/Convergence" & vbNewLine & vbNewLine &
-        "Microsoft .NET Framework 4.0", MsgBoxStyle.OkOnly, Me.Text)
+        "Microsoft .NET Framework 4.7", MsgBoxStyle.OkOnly, Me.Text)
     End Sub
 
     Private Sub mnuDonateItem_Click(sender As Object, e As EventArgs) Handles mnuDonateItem.Click
@@ -150,4 +150,11 @@ Public Class frmMain
         Process.Start("https://www.paypal.me/ascc")
     End Sub
 
+    Private Sub chkAuto_CheckedChanged(sender As Object, e As EventArgs) Handles chkAuto.CheckedChanged
+        tmrAuto.Enabled = chkAuto.Checked
+    End Sub
+
+    Private Sub tmrAuto_Tick(sender As Object, e As EventArgs) Handles tmrAuto.Tick
+        btnCalc_Click(Me, EventArgs.Empty)
+    End Sub
 End Class
