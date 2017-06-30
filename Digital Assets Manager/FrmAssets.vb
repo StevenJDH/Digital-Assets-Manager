@@ -58,7 +58,7 @@
 
     Private Sub btnClose_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnClose.Click
         If btnSave.Enabled = True AndAlso (MsgBox("Save changes before closing?", MsgBoxStyle.Question + MsgBoxStyle.YesNo, frmMain.Text)) = DialogResult.Yes Then
-            btnSave_Click(Nothing, Nothing)
+            btnSave_Click(Me, EventArgs.Empty)
         Else
             'This reloads the ds so that the count is correctly displayed on the status strip of the main screen.
             'Also, it ensures that no unsaved entries are still in the ds.
@@ -243,7 +243,7 @@
     Private Sub FrmAssets_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'Do not sort the data grid view because the dataset won't sort and will be out of sync.
         Try
-            btnRefresh_Click(Nothing, Nothing)
+            btnRefresh_Click(Me, EventArgs.Empty)
         Catch
             MsgBox(Err.Description & " Asset Manager will now close.", MsgBoxStyle.Critical, frmMain.Text)
             Me.Close()
