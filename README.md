@@ -14,10 +14,12 @@ A lot of things still need to change and improve as I get a better ideas of what
 * Live rate updates from Kraken and Bittrex
 * Database backup and restore features
 * Altcoin rate summary
+* Initial support for auto rate refreshing
+* High DPI support for up to 300%
 
 ## Future Features
 * Block confirmation checking for multiple altcoin.
-* Auto refresh rates and possible price alerts.
+* Possible price alerts.
 * Profit calculator for traders.
 * More fiat support.
 
