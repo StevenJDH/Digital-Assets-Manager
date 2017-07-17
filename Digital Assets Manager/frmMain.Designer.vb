@@ -245,21 +245,21 @@ Partial Class frmMain
         '
         Me.StatusStrip1.ImageScalingSize = New System.Drawing.Size(32, 32)
         Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AssetsToolStripStatusLabel1, Me.InvestmentToolStripStatusLabel4})
-        Me.StatusStrip1.Location = New System.Drawing.Point(0, 456)
+        Me.StatusStrip1.Location = New System.Drawing.Point(0, 453)
         Me.StatusStrip1.Name = "StatusStrip1"
         Me.StatusStrip1.Padding = New System.Windows.Forms.Padding(2, 0, 28, 0)
-        Me.StatusStrip1.Size = New System.Drawing.Size(850, 38)
+        Me.StatusStrip1.Size = New System.Drawing.Size(850, 41)
         Me.StatusStrip1.SizingGrip = False
         Me.StatusStrip1.TabIndex = 21
         Me.StatusStrip1.Text = "StatusStrip1"
         '
         'AssetsToolStripStatusLabel1
         '
-        Me.AssetsToolStripStatusLabel1.AutoSize = False
         Me.AssetsToolStripStatusLabel1.BorderSides = CType((System.Windows.Forms.ToolStripStatusLabelBorderSides.Right Or System.Windows.Forms.ToolStripStatusLabelBorderSides.Bottom), System.Windows.Forms.ToolStripStatusLabelBorderSides)
         Me.AssetsToolStripStatusLabel1.BorderStyle = System.Windows.Forms.Border3DStyle.SunkenOuter
         Me.AssetsToolStripStatusLabel1.Name = "AssetsToolStripStatusLabel1"
-        Me.AssetsToolStripStatusLabel1.Size = New System.Drawing.Size(200, 33)
+        Me.AssetsToolStripStatusLabel1.Padding = New System.Windows.Forms.Padding(0, 0, 30, 0)
+        Me.AssetsToolStripStatusLabel1.Size = New System.Drawing.Size(140, 36)
         Me.AssetsToolStripStatusLabel1.Text = "Assets: 0"
         Me.AssetsToolStripStatusLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
@@ -269,7 +269,7 @@ Partial Class frmMain
         Me.InvestmentToolStripStatusLabel4.BorderSides = CType((System.Windows.Forms.ToolStripStatusLabelBorderSides.Left Or System.Windows.Forms.ToolStripStatusLabelBorderSides.Bottom), System.Windows.Forms.ToolStripStatusLabelBorderSides)
         Me.InvestmentToolStripStatusLabel4.BorderStyle = System.Windows.Forms.Border3DStyle.SunkenOuter
         Me.InvestmentToolStripStatusLabel4.Name = "InvestmentToolStripStatusLabel4"
-        Me.InvestmentToolStripStatusLabel4.Size = New System.Drawing.Size(620, 33)
+        Me.InvestmentToolStripStatusLabel4.Size = New System.Drawing.Size(680, 36)
         Me.InvestmentToolStripStatusLabel4.Spring = True
         Me.InvestmentToolStripStatusLabel4.Tag = ""
         Me.InvestmentToolStripStatusLabel4.Text = "Investment: € 0"
