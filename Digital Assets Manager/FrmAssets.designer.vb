@@ -47,7 +47,7 @@ Partial Class FrmAssets
         '
         'btnRefresh
         '
-        Me.btnRefresh.Location = New System.Drawing.Point(624, 15)
+        Me.btnRefresh.Location = New System.Drawing.Point(616, 8)
         Me.btnRefresh.Margin = New System.Windows.Forms.Padding(6)
         Me.btnRefresh.Name = "btnRefresh"
         Me.btnRefresh.Size = New System.Drawing.Size(150, 44)
@@ -57,7 +57,7 @@ Partial Class FrmAssets
         '
         'btnDelete
         '
-        Me.btnDelete.Location = New System.Drawing.Point(624, 138)
+        Me.btnDelete.Location = New System.Drawing.Point(616, 131)
         Me.btnDelete.Margin = New System.Windows.Forms.Padding(6)
         Me.btnDelete.Name = "btnDelete"
         Me.btnDelete.Size = New System.Drawing.Size(150, 44)
@@ -68,7 +68,7 @@ Partial Class FrmAssets
         'btnUpdate
         '
         Me.btnUpdate.Enabled = False
-        Me.btnUpdate.Location = New System.Drawing.Point(624, 535)
+        Me.btnUpdate.Location = New System.Drawing.Point(616, 525)
         Me.btnUpdate.Margin = New System.Windows.Forms.Padding(6)
         Me.btnUpdate.Name = "btnUpdate"
         Me.btnUpdate.Size = New System.Drawing.Size(150, 44)
@@ -78,7 +78,7 @@ Partial Class FrmAssets
         '
         'btnAdd
         '
-        Me.btnAdd.Location = New System.Drawing.Point(624, 458)
+        Me.btnAdd.Location = New System.Drawing.Point(616, 451)
         Me.btnAdd.Margin = New System.Windows.Forms.Padding(6)
         Me.btnAdd.Name = "btnAdd"
         Me.btnAdd.Size = New System.Drawing.Size(150, 44)
@@ -89,7 +89,7 @@ Partial Class FrmAssets
         'btnSave
         '
         Me.btnSave.Enabled = False
-        Me.btnSave.Location = New System.Drawing.Point(624, 262)
+        Me.btnSave.Location = New System.Drawing.Point(616, 255)
         Me.btnSave.Margin = New System.Windows.Forms.Padding(6)
         Me.btnSave.Name = "btnSave"
         Me.btnSave.Size = New System.Drawing.Size(150, 44)
@@ -108,7 +108,7 @@ Partial Class FrmAssets
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column2, Me.Column1, Me.Column3})
         Me.DataGridView1.GridColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.DataGridView1.Location = New System.Drawing.Point(16, 15)
+        Me.DataGridView1.Location = New System.Drawing.Point(8, 8)
         Me.DataGridView1.Margin = New System.Windows.Forms.Padding(6)
         Me.DataGridView1.MultiSelect = False
         Me.DataGridView1.Name = "DataGridView1"
@@ -143,7 +143,7 @@ Partial Class FrmAssets
         '
         'btnClose
         '
-        Me.btnClose.Location = New System.Drawing.Point(624, 323)
+        Me.btnClose.Location = New System.Drawing.Point(616, 316)
         Me.btnClose.Margin = New System.Windows.Forms.Padding(6)
         Me.btnClose.Name = "btnClose"
         Me.btnClose.Size = New System.Drawing.Size(150, 44)
@@ -154,7 +154,7 @@ Partial Class FrmAssets
         'lblQuantity
         '
         Me.lblQuantity.AutoSize = True
-        Me.lblQuantity.Location = New System.Drawing.Point(16, 508)
+        Me.lblQuantity.Location = New System.Drawing.Point(8, 501)
         Me.lblQuantity.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
         Me.lblQuantity.Name = "lblQuantity"
         Me.lblQuantity.Size = New System.Drawing.Size(98, 25)
@@ -163,7 +163,7 @@ Partial Class FrmAssets
         '
         'btnEdit
         '
-        Me.btnEdit.Location = New System.Drawing.Point(624, 77)
+        Me.btnEdit.Location = New System.Drawing.Point(616, 70)
         Me.btnEdit.Margin = New System.Windows.Forms.Padding(6)
         Me.btnEdit.Name = "btnEdit"
         Me.btnEdit.Size = New System.Drawing.Size(150, 44)
@@ -173,7 +173,7 @@ Partial Class FrmAssets
         '
         'btnDeleteAll
         '
-        Me.btnDeleteAll.Location = New System.Drawing.Point(624, 200)
+        Me.btnDeleteAll.Location = New System.Drawing.Point(616, 193)
         Me.btnDeleteAll.Margin = New System.Windows.Forms.Padding(6)
         Me.btnDeleteAll.Name = "btnDeleteAll"
         Me.btnDeleteAll.Size = New System.Drawing.Size(150, 44)
@@ -186,7 +186,7 @@ Partial Class FrmAssets
         Me.cmbAssets.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cmbAssets.FormattingEnabled = True
         Me.cmbAssets.Items.AddRange(New Object() {"Bitcoin", "Dash", "Fiat (Euro)", "Ethereum", "Litecoin", "Lumens", "Monero", "PIVX", "Ripple", "Zcash"})
-        Me.cmbAssets.Location = New System.Drawing.Point(16, 462)
+        Me.cmbAssets.Location = New System.Drawing.Point(8, 455)
         Me.cmbAssets.Margin = New System.Windows.Forms.Padding(6)
         Me.cmbAssets.Name = "cmbAssets"
         Me.cmbAssets.Size = New System.Drawing.Size(588, 33)
@@ -195,7 +195,7 @@ Partial Class FrmAssets
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(16, 431)
+        Me.Label1.Location = New System.Drawing.Point(8, 424)
         Me.Label1.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(138, 25)
@@ -206,7 +206,7 @@ Partial Class FrmAssets
         '
         Me.numQuantity.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.numQuantity.DecimalPlaces = 8
-        Me.numQuantity.Location = New System.Drawing.Point(16, 538)
+        Me.numQuantity.Location = New System.Drawing.Point(8, 531)
         Me.numQuantity.Margin = New System.Windows.Forms.Padding(6)
         Me.numQuantity.Maximum = New Decimal(New Integer() {1215752192, 23, 0, 0})
         Me.numQuantity.Minimum = New Decimal(New Integer() {1, 0, 0, 524288})
@@ -219,7 +219,7 @@ Partial Class FrmAssets
         '
         Me.numInvestment.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.numInvestment.DecimalPlaces = 5
-        Me.numInvestment.Location = New System.Drawing.Point(320, 538)
+        Me.numInvestment.Location = New System.Drawing.Point(312, 531)
         Me.numInvestment.Margin = New System.Windows.Forms.Padding(6)
         Me.numInvestment.Maximum = New Decimal(New Integer() {1000000, 0, 0, 0})
         Me.numInvestment.Minimum = New Decimal(New Integer() {1, 0, 0, 327680})
@@ -231,7 +231,7 @@ Partial Class FrmAssets
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(320, 508)
+        Me.Label3.Location = New System.Drawing.Point(312, 501)
         Me.Label3.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(122, 25)
@@ -240,9 +240,10 @@ Partial Class FrmAssets
         '
         'FrmAssets
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(12.0!, 25.0!)
-        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(787, 594)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(192.0!, 192.0!)
+        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi
+        Me.AutoSize = True
+        Me.ClientSize = New System.Drawing.Size(775, 578)
         Me.ControlBox = False
         Me.Controls.Add(Me.numInvestment)
         Me.Controls.Add(Me.Label3)
@@ -264,6 +265,7 @@ Partial Class FrmAssets
         Me.MaximizeBox = False
         Me.Name = "FrmAssets"
         Me.ShowInTaskbar = False
+        Me.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "Asset Manager - 0 Asset(s)"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
