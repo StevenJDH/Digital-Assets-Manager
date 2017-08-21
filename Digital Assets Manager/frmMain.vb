@@ -15,6 +15,8 @@ Public Class frmMain
                     Select Case ds.Tables("MyAssets").Rows(i).Item("Digital Asset")
                         Case "Bitcoin"
                             nTotal += myKraken.Bitcoin * ds.Tables("MyAssets").Rows(i).Item("Quantity")
+                        Case "Bitcoin Cash"
+                            nTotal += myKraken.BitcoinCash * ds.Tables("MyAssets").Rows(i).Item("Quantity")
                         Case "Dash"
                             nTotal += myKraken.Dash * ds.Tables("MyAssets").Rows(i).Item("Quantity")
                         Case "Fiat (Euro)"
@@ -36,6 +38,7 @@ Public Class frmMain
                     End Select
                 Next i
                 lblBTC.Text = "Bitcoin: " & Math.Round(myKraken.Bitcoin, 4)
+                lblBCH.Text = "Bitcoin Cash: " & Math.Round(myKraken.BitcoinCash, 4)
                 lblDash.Text = "Dash: " & Math.Round(myKraken.Dash, 4)
                 lblETH.Text = "Ethereum: " & Math.Round(myKraken.Ethereum, 4)
                 lblLTC.Text = "Litecoin: " & Math.Round(myKraken.Litecoin, 4)
@@ -140,7 +143,7 @@ Public Class frmMain
     End Sub
 
     Private Sub mnuAboutItem_Click(sender As Object, e As EventArgs) Handles mnuAboutItem.Click
-        MsgBox("Digital Assets Manager 1.0 (30/6/2017)" & vbNewLine & vbNewLine & "Author: Steven Jenkins De Haro" &
+        MsgBox("Digital Assets Manager 1.0 (21/8/2017)" & vbNewLine & vbNewLine & "Author: Steven Jenkins De Haro" &
         vbNewLine & "A Steve Creation/Convergence" & vbNewLine & vbNewLine &
         "Microsoft .NET Framework 4.7", MsgBoxStyle.OkOnly, Me.Text)
     End Sub

@@ -54,6 +54,7 @@ Partial Class frmMain
         Me.lblXLM = New System.Windows.Forms.Label()
         Me.chkAuto = New System.Windows.Forms.CheckBox()
         Me.tmrAuto = New System.Windows.Forms.Timer(Me.components)
+        Me.lblBCH = New System.Windows.Forms.Label()
         Me.MenuStrip1.SuspendLayout()
         Me.StatusStrip1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
@@ -61,7 +62,7 @@ Partial Class frmMain
         '
         'btnCalc
         '
-        Me.btnCalc.Location = New System.Drawing.Point(336, 354)
+        Me.btnCalc.Location = New System.Drawing.Point(336, 393)
         Me.btnCalc.Margin = New System.Windows.Forms.Padding(6)
         Me.btnCalc.Name = "btnCalc"
         Me.btnCalc.Size = New System.Drawing.Size(182, 77)
@@ -245,7 +246,7 @@ Partial Class frmMain
         '
         Me.StatusStrip1.ImageScalingSize = New System.Drawing.Size(32, 32)
         Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AssetsToolStripStatusLabel1, Me.InvestmentToolStripStatusLabel4})
-        Me.StatusStrip1.Location = New System.Drawing.Point(0, 453)
+        Me.StatusStrip1.Location = New System.Drawing.Point(0, 490)
         Me.StatusStrip1.Name = "StatusStrip1"
         Me.StatusStrip1.Padding = New System.Windows.Forms.Padding(2, 0, 28, 0)
         Me.StatusStrip1.Size = New System.Drawing.Size(850, 41)
@@ -281,6 +282,7 @@ Partial Class frmMain
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.lblBCH)
         Me.GroupBox1.Controls.Add(Me.lblXLM)
         Me.GroupBox1.Controls.Add(Me.lblDash)
         Me.GroupBox1.Controls.Add(Me.lblZEC)
@@ -294,7 +296,7 @@ Partial Class frmMain
         Me.GroupBox1.Margin = New System.Windows.Forms.Padding(6)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Padding = New System.Windows.Forms.Padding(6)
-        Me.GroupBox1.Size = New System.Drawing.Size(816, 154)
+        Me.GroupBox1.Size = New System.Drawing.Size(816, 191)
         Me.GroupBox1.TabIndex = 22
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Summary"
@@ -312,7 +314,7 @@ Partial Class frmMain
         'chkAuto
         '
         Me.chkAuto.AutoSize = True
-        Me.chkAuto.Location = New System.Drawing.Point(544, 369)
+        Me.chkAuto.Location = New System.Drawing.Point(544, 408)
         Me.chkAuto.Margin = New System.Windows.Forms.Padding(6)
         Me.chkAuto.Name = "chkAuto"
         Me.chkAuto.Size = New System.Drawing.Size(163, 29)
@@ -324,11 +326,21 @@ Partial Class frmMain
         '
         Me.tmrAuto.Interval = 5000
         '
+        'lblBCH
+        '
+        Me.lblBCH.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblBCH.Location = New System.Drawing.Point(16, 144)
+        Me.lblBCH.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.lblBCH.Name = "lblBCH"
+        Me.lblBCH.Size = New System.Drawing.Size(256, 25)
+        Me.lblBCH.TabIndex = 21
+        Me.lblBCH.Text = "Bitcoin Cash: 0"
+        '
         'frmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(192.0!, 192.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi
-        Me.ClientSize = New System.Drawing.Size(850, 494)
+        Me.ClientSize = New System.Drawing.Size(850, 531)
         Me.Controls.Add(Me.chkAuto)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.StatusStrip1)
@@ -383,4 +395,5 @@ Partial Class frmMain
     Friend WithEvents lblXLM As Label
     Friend WithEvents chkAuto As CheckBox
     Friend WithEvents tmrAuto As Timer
+    Friend WithEvents lblBCH As Label
 End Class

@@ -185,7 +185,7 @@ Partial Class FrmAssets
         '
         Me.cmbAssets.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cmbAssets.FormattingEnabled = True
-        Me.cmbAssets.Items.AddRange(New Object() {"Bitcoin", "Dash", "Fiat (Euro)", "Ethereum", "Litecoin", "Lumens", "Monero", "PIVX", "Ripple", "Zcash"})
+        Me.cmbAssets.Items.AddRange(New Object() {"Bitcoin", "Bitcoin Cash", "Dash", "Fiat (Euro)", "Ethereum", "Litecoin", "Lumens", "Monero", "PIVX", "Ripple", "Zcash"})
         Me.cmbAssets.Location = New System.Drawing.Point(8, 455)
         Me.cmbAssets.Margin = New System.Windows.Forms.Padding(6)
         Me.cmbAssets.Name = "cmbAssets"

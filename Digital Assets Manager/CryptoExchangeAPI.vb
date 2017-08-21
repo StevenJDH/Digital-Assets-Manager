@@ -15,7 +15,7 @@ Public Class CryptoExchangeAPI
         Dim jsonKraken As JObject
 
         Public Overrides Sub UpdateRates()
-            Dim jsonData As String = New System.Net.WebClient().DownloadString("https://api.kraken.com/0/public/Ticker?pair=DASHEUR,ZECEUR,ETHEUR,XMREUR,XBTEUR,LTCEUR,XRPEUR,XLMEUR")
+            Dim jsonData As String = New System.Net.WebClient().DownloadString("https://api.kraken.com/0/public/Ticker?pair=DASHEUR,ZECEUR,ETHEUR,XMREUR,XBTEUR,BCHEUR,LTCEUR,XRPEUR,XLMEUR")
             jsonKraken = JObject.Parse(jsonData)
 
             Dim jsonErrorCheck As Array = jsonKraken.SelectToken("error").ToArray
@@ -28,6 +28,8 @@ Public Class CryptoExchangeAPI
             Select Case assetName
                 Case "Bitcoin"
                     Return jsonKraken.SelectToken("result").SelectToken("XXBTZEUR").SelectToken("c")(0)
+                Case "Bitcoin Cash"
+                    Return jsonKraken.SelectToken("result").SelectToken("BCHEUR").SelectToken("c")(0)
                 Case "Dash"
                     Return jsonKraken.SelectToken("result").SelectToken("DASHEUR").SelectToken("c")(0)
                 Case "Ethereum"
@@ -50,7 +52,9 @@ Public Class CryptoExchangeAPI
         Public Function Bitcoin() As Decimal
             Return GetRate("Bitcoin")
         End Function
-
+        Public Function BitcoinCash() As Decimal
+            Return GetRate("Bitcoin Cash")
+        End Function
         Public Function Dash() As Decimal
             Return GetRate("Dash")
         End Function
