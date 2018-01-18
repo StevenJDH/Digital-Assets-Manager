@@ -85,7 +85,7 @@ Public Class frmMain
             ds.ReadXml(nXML_Path)
         End If
 
-        If ds.Tables.Count < 1 Or ds.Tables("MyAssets").Rows.Count < 1 Then
+        If ds.Tables.Count < 1 OrElse ds.Tables("MyAssets").Rows.Count < 1 Then
             MsgBox("You have not entered any digital assets into your database yet.", MsgBoxStyle.Information, Me.Text)
             ds.Clear()
         Else
@@ -143,7 +143,7 @@ Public Class frmMain
     End Sub
 
     Private Sub mnuAboutItem_Click(sender As Object, e As EventArgs) Handles mnuAboutItem.Click
-        MsgBox("Digital Assets Manager 1.0 (21/8/2017)" & vbNewLine & vbNewLine & "Author: Steven Jenkins De Haro" &
+        MsgBox("Digital Assets Manager 1.0 (18/1/2018)" & vbNewLine & vbNewLine & "Author: Steven Jenkins De Haro" &
         vbNewLine & "A Steve Creation/Convergence" & vbNewLine & vbNewLine &
         "Microsoft .NET Framework 4.7", MsgBoxStyle.OkOnly, Me.Text)
     End Sub
