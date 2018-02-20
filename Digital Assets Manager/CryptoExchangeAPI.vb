@@ -15,7 +15,7 @@ Public Class CryptoExchangeAPI
         Dim jsonKraken As JObject
 
         Public Overrides Sub UpdateRates()
-            Dim jsonData As String = New System.Net.WebClient().DownloadString("https://api.kraken.com/0/public/Ticker?pair=DASHEUR,ZECEUR,ETHEUR,XMREUR,XBTEUR,BCHEUR,LTCEUR,XRPEUR,XLMXBT")
+            Dim jsonData As String = New System.Net.WebClient().DownloadString("https://api.kraken.com/0/public/Ticker?pair=DASHEUR,ZECEUR,ETHEUR,XMREUR,XBTEUR,BCHEUR,LTCEUR,XRPEUR,XLMEUR")
             jsonKraken = JObject.Parse(jsonData)
 
             Dim jsonErrorCheck As Array = jsonKraken.SelectToken("error").ToArray
@@ -37,7 +37,7 @@ Public Class CryptoExchangeAPI
                 Case "Litecoin"
                     Return jsonKraken.SelectToken("result").SelectToken("XLTCZEUR").SelectToken("c")(0)
                 Case "Lumens"
-                    Return jsonKraken.SelectToken("result").SelectToken("XXLMXXBT").SelectToken("c")(0)
+                    Return jsonKraken.SelectToken("result").SelectToken("XXLMZEUR").SelectToken("c")(0)
                 Case "Monero"
                     Return jsonKraken.SelectToken("result").SelectToken("XXMRZEUR").SelectToken("c")(0)
                 Case "Ripple"
@@ -65,7 +65,7 @@ Public Class CryptoExchangeAPI
             Return GetRate("Litecoin")
         End Function
         Public Function Lumens() As Decimal
-            Return GetRate("Lumens") * GetRate("Bitcoin") 'Converts Lumens > EUR as this pair is no longer natively supported.
+            Return GetRate("Lumens")
         End Function
         Public Function Monero() As Decimal
             Return GetRate("Monero")

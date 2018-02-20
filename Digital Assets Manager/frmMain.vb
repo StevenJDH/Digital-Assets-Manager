@@ -143,7 +143,7 @@ Public Class frmMain
     End Sub
 
     Private Sub mnuAboutItem_Click(sender As Object, e As EventArgs) Handles mnuAboutItem.Click
-        MsgBox("Digital Assets Manager 1.0 (18/1/2018)" & vbNewLine & vbNewLine & "Author: Steven Jenkins De Haro" &
+        MsgBox("Digital Assets Manager 1.0 (20/2/2018)" & vbNewLine & vbNewLine & "Author: Steven Jenkins De Haro" &
         vbNewLine & "A Steve Creation/Convergence" & vbNewLine & vbNewLine &
         "Microsoft .NET Framework 4.7", MsgBoxStyle.OkOnly, Me.Text)
     End Sub
