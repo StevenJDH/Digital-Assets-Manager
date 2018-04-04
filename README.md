@@ -6,7 +6,7 @@ Releases: https://github.com/StevenJDH/Digital-Assets-Manager/releases
 Changelog: https://github.com/StevenJDH/Digital-Assets-Manager/wiki/Changelog
 
 ## Application is still in alpha stages with a temporary interface.
-A lot of things still need to change and improve as I get a better ideas of what I want to do with this application and how much time I have to work on it.
+A lot of things still need to change and improve as I get a better idea of what I want to do with this application and how much time I have to work on it.
 
 ## Features
 * Profit and investment monitoring.
