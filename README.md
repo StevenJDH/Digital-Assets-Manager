@@ -43,7 +43,7 @@ I can be reached here directly at https://21.co/stevenjdh
 
 |Method       | Address                                                                                                    |
 |------------:|:-----------------------------------------------------------------------------------------------------------|
-|PayPal:      | https://www.paypal.me/stevenjdh                                                                            |
+|PayPal:      | [https://www.paypal.me/stevenjdh](https://www.paypal.me/stevenjdh "Steven's Paypal Page")                  |
 |Bitcoin:     | 3GyeQvN6imXEHVcdwrZwKHLZNGdnXeDfw2                                                                         |
 |Litecoin:    | MAJtR4ccdyUQtiiBpg9PwF2AZ6Xbk5ioLm                                                                         |
 |Ethereum:    | 0xa62b53c1d49f9C481e20E5675fbffDab2Fcda82E                                                                 |
