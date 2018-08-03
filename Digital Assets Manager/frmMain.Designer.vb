@@ -51,10 +51,10 @@ Partial Class frmMain
         Me.OFDialog1 = New System.Windows.Forms.OpenFileDialog()
         Me.FBDialog1 = New System.Windows.Forms.FolderBrowserDialog()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.lblBCH = New System.Windows.Forms.Label()
         Me.lblXLM = New System.Windows.Forms.Label()
         Me.chkAuto = New System.Windows.Forms.CheckBox()
         Me.tmrAuto = New System.Windows.Forms.Timer(Me.components)
-        Me.lblBCH = New System.Windows.Forms.Label()
         Me.MenuStrip1.SuspendLayout()
         Me.StatusStrip1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
@@ -62,10 +62,9 @@ Partial Class frmMain
         '
         'btnCalc
         '
-        Me.btnCalc.Location = New System.Drawing.Point(336, 393)
-        Me.btnCalc.Margin = New System.Windows.Forms.Padding(6)
+        Me.btnCalc.Location = New System.Drawing.Point(168, 196)
         Me.btnCalc.Name = "btnCalc"
-        Me.btnCalc.Size = New System.Drawing.Size(182, 77)
+        Me.btnCalc.Size = New System.Drawing.Size(91, 38)
         Me.btnCalc.TabIndex = 0
         Me.btnCalc.Text = "Calculate"
         Me.btnCalc.UseVisualStyleBackColor = True
@@ -74,10 +73,9 @@ Partial Class frmMain
         '
         Me.lblTotal.Font = New System.Drawing.Font("Microsoft Sans Serif", 36.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblTotal.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.lblTotal.Location = New System.Drawing.Point(16, 62)
-        Me.lblTotal.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.lblTotal.Location = New System.Drawing.Point(8, 31)
         Me.lblTotal.Name = "lblTotal"
-        Me.lblTotal.Size = New System.Drawing.Size(816, 108)
+        Me.lblTotal.Size = New System.Drawing.Size(408, 54)
         Me.lblTotal.TabIndex = 3
         Me.lblTotal.Text = "0.00"
         Me.lblTotal.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -85,80 +83,72 @@ Partial Class frmMain
         'lblDash
         '
         Me.lblDash.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblDash.Location = New System.Drawing.Point(16, 46)
-        Me.lblDash.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.lblDash.Location = New System.Drawing.Point(8, 23)
         Me.lblDash.Name = "lblDash"
-        Me.lblDash.Size = New System.Drawing.Size(256, 25)
+        Me.lblDash.Size = New System.Drawing.Size(128, 12)
         Me.lblDash.TabIndex = 4
         Me.lblDash.Text = "Dash: 0"
         '
         'lblZEC
         '
         Me.lblZEC.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblZEC.Location = New System.Drawing.Point(16, 77)
-        Me.lblZEC.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.lblZEC.Location = New System.Drawing.Point(8, 38)
         Me.lblZEC.Name = "lblZEC"
-        Me.lblZEC.Size = New System.Drawing.Size(256, 25)
+        Me.lblZEC.Size = New System.Drawing.Size(128, 12)
         Me.lblZEC.TabIndex = 5
         Me.lblZEC.Text = "Zcash: 0"
         '
         'lblXMR
         '
         Me.lblXMR.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblXMR.Location = New System.Drawing.Point(288, 46)
-        Me.lblXMR.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.lblXMR.Location = New System.Drawing.Point(144, 23)
         Me.lblXMR.Name = "lblXMR"
-        Me.lblXMR.Size = New System.Drawing.Size(272, 25)
+        Me.lblXMR.Size = New System.Drawing.Size(136, 12)
         Me.lblXMR.TabIndex = 9
         Me.lblXMR.Text = "Monero: 0"
         '
         'lblETH
         '
         Me.lblETH.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblETH.Location = New System.Drawing.Point(16, 108)
-        Me.lblETH.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.lblETH.Location = New System.Drawing.Point(8, 54)
         Me.lblETH.Name = "lblETH"
-        Me.lblETH.Size = New System.Drawing.Size(256, 25)
+        Me.lblETH.Size = New System.Drawing.Size(128, 12)
         Me.lblETH.TabIndex = 8
         Me.lblETH.Text = "Ethereum: 0"
         '
         'lblPIVX
         '
         Me.lblPIVX.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblPIVX.Location = New System.Drawing.Point(576, 77)
-        Me.lblPIVX.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.lblPIVX.Location = New System.Drawing.Point(288, 38)
         Me.lblPIVX.Name = "lblPIVX"
-        Me.lblPIVX.Size = New System.Drawing.Size(224, 25)
+        Me.lblPIVX.Size = New System.Drawing.Size(112, 12)
         Me.lblPIVX.TabIndex = 13
         Me.lblPIVX.Text = "PIVX: 0"
         '
         'lblBTC
         '
         Me.lblBTC.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblBTC.Location = New System.Drawing.Point(288, 77)
-        Me.lblBTC.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.lblBTC.Location = New System.Drawing.Point(144, 38)
         Me.lblBTC.Name = "lblBTC"
-        Me.lblBTC.Size = New System.Drawing.Size(272, 25)
+        Me.lblBTC.Size = New System.Drawing.Size(136, 12)
         Me.lblBTC.TabIndex = 15
         Me.lblBTC.Text = "Bitcoin: 0"
         '
         'lblLTC
         '
         Me.lblLTC.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblLTC.Location = New System.Drawing.Point(288, 108)
-        Me.lblLTC.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.lblLTC.Location = New System.Drawing.Point(144, 54)
         Me.lblLTC.Name = "lblLTC"
-        Me.lblLTC.Size = New System.Drawing.Size(272, 25)
+        Me.lblLTC.Size = New System.Drawing.Size(136, 12)
         Me.lblLTC.TabIndex = 19
         Me.lblLTC.Text = "Litecoin: 0"
         '
         'lblXRP
         '
         Me.lblXRP.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblXRP.Location = New System.Drawing.Point(576, 46)
-        Me.lblXRP.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.lblXRP.Location = New System.Drawing.Point(288, 23)
         Me.lblXRP.Name = "lblXRP"
-        Me.lblXRP.Size = New System.Drawing.Size(224, 25)
+        Me.lblXRP.Size = New System.Drawing.Size(112, 12)
         Me.lblXRP.TabIndex = 17
         Me.lblXRP.Text = "Ripple: 0"
         '
@@ -168,8 +158,7 @@ Partial Class frmMain
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.ManageToolStripMenuItem, Me.HelpToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(12, 4, 0, 4)
-        Me.MenuStrip1.Size = New System.Drawing.Size(850, 44)
+        Me.MenuStrip1.Size = New System.Drawing.Size(425, 24)
         Me.MenuStrip1.TabIndex = 20
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -177,79 +166,78 @@ Partial Class frmMain
         '
         Me.FileToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ExitToolStripMenuItem})
         Me.FileToolStripMenuItem.Name = "FileToolStripMenuItem"
-        Me.FileToolStripMenuItem.Size = New System.Drawing.Size(64, 36)
+        Me.FileToolStripMenuItem.Size = New System.Drawing.Size(37, 20)
         Me.FileToolStripMenuItem.Text = "File"
         '
         'ExitToolStripMenuItem
         '
         Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
-        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(151, 38)
+        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(92, 22)
         Me.ExitToolStripMenuItem.Text = "Exit"
         '
         'ManageToolStripMenuItem
         '
         Me.ManageToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mnuAssetsItem, Me.ToolStripSeparator1, Me.mnuDatabaseMaintenance})
         Me.ManageToolStripMenuItem.Name = "ManageToolStripMenuItem"
-        Me.ManageToolStripMenuItem.Size = New System.Drawing.Size(114, 36)
+        Me.ManageToolStripMenuItem.Size = New System.Drawing.Size(62, 20)
         Me.ManageToolStripMenuItem.Text = "Manage"
         '
         'mnuAssetsItem
         '
         Me.mnuAssetsItem.Name = "mnuAssetsItem"
-        Me.mnuAssetsItem.Size = New System.Drawing.Size(358, 38)
+        Me.mnuAssetsItem.Size = New System.Drawing.Size(194, 22)
         Me.mnuAssetsItem.Text = "Assets"
         '
         'ToolStripSeparator1
         '
         Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
-        Me.ToolStripSeparator1.Size = New System.Drawing.Size(355, 6)
+        Me.ToolStripSeparator1.Size = New System.Drawing.Size(191, 6)
         '
         'mnuDatabaseMaintenance
         '
         Me.mnuDatabaseMaintenance.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mnuBackupItem, Me.mnuRestoreItem})
         Me.mnuDatabaseMaintenance.Name = "mnuDatabaseMaintenance"
-        Me.mnuDatabaseMaintenance.Size = New System.Drawing.Size(358, 38)
+        Me.mnuDatabaseMaintenance.Size = New System.Drawing.Size(194, 22)
         Me.mnuDatabaseMaintenance.Text = "Database Maintenance"
         '
         'mnuBackupItem
         '
         Me.mnuBackupItem.Name = "mnuBackupItem"
-        Me.mnuBackupItem.Size = New System.Drawing.Size(193, 38)
+        Me.mnuBackupItem.Size = New System.Drawing.Size(113, 22)
         Me.mnuBackupItem.Text = "Backup"
         '
         'mnuRestoreItem
         '
         Me.mnuRestoreItem.Name = "mnuRestoreItem"
-        Me.mnuRestoreItem.Size = New System.Drawing.Size(193, 38)
+        Me.mnuRestoreItem.Size = New System.Drawing.Size(113, 22)
         Me.mnuRestoreItem.Text = "Restore"
         '
         'HelpToolStripMenuItem
         '
         Me.HelpToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mnuDonateItem, Me.mnuAboutItem})
         Me.HelpToolStripMenuItem.Name = "HelpToolStripMenuItem"
-        Me.HelpToolStripMenuItem.Size = New System.Drawing.Size(77, 36)
+        Me.HelpToolStripMenuItem.Size = New System.Drawing.Size(44, 20)
         Me.HelpToolStripMenuItem.Text = "Help"
         '
         'mnuDonateItem
         '
         Me.mnuDonateItem.Name = "mnuDonateItem"
-        Me.mnuDonateItem.Size = New System.Drawing.Size(294, 38)
+        Me.mnuDonateItem.Size = New System.Drawing.Size(167, 22)
         Me.mnuDonateItem.Text = "Donate (PayPal)..."
         '
         'mnuAboutItem
         '
         Me.mnuAboutItem.Name = "mnuAboutItem"
-        Me.mnuAboutItem.Size = New System.Drawing.Size(294, 38)
+        Me.mnuAboutItem.Size = New System.Drawing.Size(167, 22)
         Me.mnuAboutItem.Text = "About"
         '
         'StatusStrip1
         '
         Me.StatusStrip1.ImageScalingSize = New System.Drawing.Size(32, 32)
         Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AssetsToolStripStatusLabel1, Me.InvestmentToolStripStatusLabel4})
-        Me.StatusStrip1.Location = New System.Drawing.Point(0, 490)
+        Me.StatusStrip1.Location = New System.Drawing.Point(0, 242)
         Me.StatusStrip1.Name = "StatusStrip1"
-        Me.StatusStrip1.Padding = New System.Windows.Forms.Padding(2, 0, 28, 0)
-        Me.StatusStrip1.Size = New System.Drawing.Size(850, 41)
+        Me.StatusStrip1.Size = New System.Drawing.Size(425, 24)
         Me.StatusStrip1.SizingGrip = False
         Me.StatusStrip1.TabIndex = 21
         Me.StatusStrip1.Text = "StatusStrip1"
@@ -260,7 +248,7 @@ Partial Class frmMain
         Me.AssetsToolStripStatusLabel1.BorderStyle = System.Windows.Forms.Border3DStyle.SunkenOuter
         Me.AssetsToolStripStatusLabel1.Name = "AssetsToolStripStatusLabel1"
         Me.AssetsToolStripStatusLabel1.Padding = New System.Windows.Forms.Padding(0, 0, 30, 0)
-        Me.AssetsToolStripStatusLabel1.Size = New System.Drawing.Size(140, 36)
+        Me.AssetsToolStripStatusLabel1.Size = New System.Drawing.Size(86, 19)
         Me.AssetsToolStripStatusLabel1.Text = "Assets: 0"
         Me.AssetsToolStripStatusLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
@@ -270,7 +258,7 @@ Partial Class frmMain
         Me.InvestmentToolStripStatusLabel4.BorderSides = CType((System.Windows.Forms.ToolStripStatusLabelBorderSides.Left Or System.Windows.Forms.ToolStripStatusLabelBorderSides.Bottom), System.Windows.Forms.ToolStripStatusLabelBorderSides)
         Me.InvestmentToolStripStatusLabel4.BorderStyle = System.Windows.Forms.Border3DStyle.SunkenOuter
         Me.InvestmentToolStripStatusLabel4.Name = "InvestmentToolStripStatusLabel4"
-        Me.InvestmentToolStripStatusLabel4.Size = New System.Drawing.Size(680, 36)
+        Me.InvestmentToolStripStatusLabel4.Size = New System.Drawing.Size(324, 19)
         Me.InvestmentToolStripStatusLabel4.Spring = True
         Me.InvestmentToolStripStatusLabel4.Tag = ""
         Me.InvestmentToolStripStatusLabel4.Text = "Investment: € 0"
@@ -292,32 +280,37 @@ Partial Class frmMain
         Me.GroupBox1.Controls.Add(Me.lblXMR)
         Me.GroupBox1.Controls.Add(Me.lblBTC)
         Me.GroupBox1.Controls.Add(Me.lblPIVX)
-        Me.GroupBox1.Location = New System.Drawing.Point(16, 185)
-        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(6)
+        Me.GroupBox1.Location = New System.Drawing.Point(8, 92)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(6)
-        Me.GroupBox1.Size = New System.Drawing.Size(816, 191)
+        Me.GroupBox1.Size = New System.Drawing.Size(408, 96)
         Me.GroupBox1.TabIndex = 22
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Summary"
         '
+        'lblBCH
+        '
+        Me.lblBCH.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblBCH.Location = New System.Drawing.Point(8, 72)
+        Me.lblBCH.Name = "lblBCH"
+        Me.lblBCH.Size = New System.Drawing.Size(128, 12)
+        Me.lblBCH.TabIndex = 21
+        Me.lblBCH.Text = "Bitcoin Cash: 0"
+        '
         'lblXLM
         '
         Me.lblXLM.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblXLM.Location = New System.Drawing.Point(576, 108)
-        Me.lblXLM.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.lblXLM.Location = New System.Drawing.Point(288, 54)
         Me.lblXLM.Name = "lblXLM"
-        Me.lblXLM.Size = New System.Drawing.Size(224, 25)
+        Me.lblXLM.Size = New System.Drawing.Size(112, 12)
         Me.lblXLM.TabIndex = 20
         Me.lblXLM.Text = "Lumens: 0"
         '
         'chkAuto
         '
         Me.chkAuto.AutoSize = True
-        Me.chkAuto.Location = New System.Drawing.Point(544, 408)
-        Me.chkAuto.Margin = New System.Windows.Forms.Padding(6)
+        Me.chkAuto.Location = New System.Drawing.Point(272, 204)
         Me.chkAuto.Name = "chkAuto"
-        Me.chkAuto.Size = New System.Drawing.Size(163, 29)
+        Me.chkAuto.Size = New System.Drawing.Size(86, 17)
         Me.chkAuto.TabIndex = 23
         Me.chkAuto.Text = "Auto Update"
         Me.chkAuto.UseVisualStyleBackColor = True
@@ -326,21 +319,11 @@ Partial Class frmMain
         '
         Me.tmrAuto.Interval = 5000
         '
-        'lblBCH
-        '
-        Me.lblBCH.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblBCH.Location = New System.Drawing.Point(16, 144)
-        Me.lblBCH.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
-        Me.lblBCH.Name = "lblBCH"
-        Me.lblBCH.Size = New System.Drawing.Size(256, 25)
-        Me.lblBCH.TabIndex = 21
-        Me.lblBCH.Text = "Bitcoin Cash: 0"
-        '
         'frmMain
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(192.0!, 192.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(96.0!, 96.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi
-        Me.ClientSize = New System.Drawing.Size(850, 531)
+        Me.ClientSize = New System.Drawing.Size(425, 266)
         Me.Controls.Add(Me.chkAuto)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.StatusStrip1)
@@ -349,7 +332,6 @@ Partial Class frmMain
         Me.Controls.Add(Me.MenuStrip1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.MainMenuStrip = Me.MenuStrip1
-        Me.Margin = New System.Windows.Forms.Padding(6)
         Me.MaximizeBox = False
         Me.Name = "frmMain"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
