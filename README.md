@@ -1,4 +1,9 @@
 # Digital Assets Manager
+
+![GitHub All Releases](https://img.shields.io/github/downloads/StevenJDH/Digital-Assets-Manager/total)
+![GitHub release (latest by date including pre-releases)](https://img.shields.io/github/v/release/StevenJDH/Digital-Assets-Manager?include_prereleases)
+![GitHub](https://img.shields.io/github/license/StevenJDH/Digital-Assets-Manager)
+
 Monitors your cryptocurrency profits without needing to access your accounts or deal with watch only wallets that may pose a privacy risk. This is also useful for those who are using hardware wallets.
 
 Releases: [https://github.com/StevenJDH/Digital-Assets-Manager/releases](https://github.com/StevenJDH/Digital-Assets-Manager/releases)
@@ -29,15 +34,9 @@ Initial support was based on exchanges that I used as this was a personal projec
 ## TODO
 Way too much to even begin to list. Check back in a few months as a lot of the work is being done under the hood.
 
-## Why am I contributing?
-This is just one of many tools and applications I’ve created over the years for myself that I thought I should share with the public. I am new to GitHub so bear with me while I get adjusted. Hopefully, with community support, some of these applications will grow into something better.
-
 ## Do you have any questions?
 Many commonly asked questions are answered in the FAQ:
 [https://github.com/StevenJDH/Digital-Assets-Manager/wiki/FAQ](https://github.com/StevenJDH/Digital-Assets-Manager/wiki/FAQ)
-
-## Need to contact me?
-I can be reached here directly at [https://21.co/stevenjdh](https://21.co/stevenjdh "Contact Page")
 
 ## Want to show your support?
 
